@@ -1,0 +1,22 @@
+{
+  "name": "cypress_at",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nuzulius/Cypress_AT.git"
+  },
+  "author": "Nuzulius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nuzulius/Cypress_AT/issues"
+  },
+  "homepage": "https://github.com/Nuzulius/Cypress_AT#readme",
+  "devDependencies": {
+    "cypress": "^13.7.1"
+  }
+}

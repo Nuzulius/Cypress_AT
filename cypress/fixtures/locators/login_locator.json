@@ -1,0 +1,7 @@
+{
+  "jp_flag": "img[src='/annotation/flags/jp.svg']",
+  "us_flag": "img[src='/annotation/flags/us.svg']",
+  "username_input": "#username",
+  "password_input": "#password",
+  "login_button": "button[type='submit']"
+}
