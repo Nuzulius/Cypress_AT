@@ -1,7 +1,10 @@
 {
   "jp_flag": "img[src='/annotation/flags/jp.svg']",
   "us_flag": "img[src='/annotation/flags/us.svg']",
-  "username_input": "#username",
-  "password_input": "#password",
-  "login_button": "button[type='submit']"
+
+  "username_input": "input[type='text']",
+  "password_input": "input[type='password']",
+
+  "login_button": "button[type='submit']",
+  "logout_button": "button[type='button']:nth-of-type(2)"
 }

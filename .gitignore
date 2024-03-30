@@ -2,3 +2,8 @@
 
 # ignore libraries
 /node_modules
+credentials.json
+gsheets.js
+
+# ignore environment configuration file
+.env

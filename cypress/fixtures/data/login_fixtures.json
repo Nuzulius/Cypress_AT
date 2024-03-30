@@ -1,0 +1,59 @@
+{
+  "login_invalid": [
+    {
+      "username": "",
+      "password": "123456"
+    },
+    {
+      "username": "",
+      "password": "654321"
+    },
+    {
+      "username": "",
+      "password": ""
+    },
+    {
+      "username": "admin-em-zero",
+      "password": "123456"
+    },
+    {
+      "username": "admin-em-zero",
+      "password": "654321"
+    },
+    {
+      "username": "admin-em-zero",
+      "password": ""
+    },
+    {
+      "username": "admin-em-2",
+      "password": "654321"
+    },
+    {
+      "username": "admin-em-2",
+      "password": ""
+    },
+    {
+      "username": "em-an-1",
+      "password": "654321"
+    },
+    {
+      "username": "em-an-1",
+      "password": ""
+    }
+  ],
+
+  "login_valid": [
+    {
+      "username": "admin-em-2",
+      "password": "123456"
+    },
+    {
+      "username": "em-an-1",
+      "password": "123456"
+    },
+    {
+      "username": "em-op-1",
+      "password": "123456"
+    }
+  ]
+}
