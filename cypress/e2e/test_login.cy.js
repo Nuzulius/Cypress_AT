@@ -4,6 +4,7 @@ import loginFixtures from "../fixtures/data/login_fixtures.json";
 describe("Login Scenario", () => {
   it("Launch Annotation Tool", () => {
     cy.launch_app();
+    cy.wait(2000);
   });
 
   it("Change language", () => {
@@ -26,21 +27,34 @@ describe("Login Scenario", () => {
 
     // Define elements
     const validation = ["ログアウト", "logout"];
+    const languages = {
+      jp: {
+        flag: loginLocators.jp_flag,
+        elements: ["ユーザー名", "パスワード"],
+      },
+      en: { flag: loginLocators.us_flag, elements: ["Username", "Password"] },
+    };
 
     // process
-    loginFixtures.login_invalid.forEach((credentials) => {
-      if (credentials.username === "" || credentials.password === "") {
-        return;
-      }
+    const performLogin = (language) => {
+      const { flag, elements } = languages[language];
 
-      cy.get(loginLocators.username_input).clear().type(credentials.username);
-      cy.get(loginLocators.password_input).clear().type(credentials.password);
-      cy.get(loginLocators.login_button).click();
+      cy.get(flag).click();
+      elements.forEach((element) => cy.contains(element).should("exist"));
+
+      loginFixtures.login_invalid.forEach((data) => {
+        cy.get(loginLocators.username_input).clear().type(data.username);
+        cy.get(loginLocators.password_input).clear().type(data.password);
+        cy.get(loginLocators.login_button).click();
+        cy.wait(2000);
+      });
 
       validation.forEach((element) => {
         cy.contains(element).should("not.exist");
       });
-    });
+    };
+
+    Object.keys(languages).forEach((language) => performLogin(language));
   });
 
   it("Login process - valid", () => {
@@ -55,29 +69,25 @@ describe("Login Scenario", () => {
       en: { flag: loginLocators.us_flag, elements: ["Username", "Password"] },
     };
 
+    // process
     const performLogin = (language) => {
       const { flag, elements } = languages[language];
 
       cy.get(flag).click();
       elements.forEach((element) => cy.contains(element).should("exist"));
 
-      loginFixtures.login_valid.forEach((credentials) => {
-        if (credentials.username !== "" && credentials.password !== "") {
-          cy.get(loginLocators.username_input)
-            .clear()
-            .type(credentials.username);
-          cy.get(loginLocators.password_input)
-            .clear()
-            .type(credentials.password);
+      loginFixtures.login_valid.forEach((data) => {
+        if (data.username !== "" && data.password !== "") {
+          cy.get(loginLocators.username_input).clear().type(data.username);
+          cy.get(loginLocators.password_input).clear().type(data.password);
           cy.get(loginLocators.login_button).click();
           cy.wait(2000);
           cy.get(loginLocators.logout_button).click();
+          cy.wait(2000);
         }
       });
     };
 
     Object.keys(languages).forEach((language) => performLogin(language));
   });
-
-  //
 });

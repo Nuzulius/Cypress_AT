@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "project": "automation-project-1",
+      "project_source": "0",
+      "source_data": "2",
+      "cancel": "click"
+    },
+    {
+      "project": "automation-project-1",
+      "project_source": "1",
+      "source_data": "5",
+      "cancel": "outsidebox"
+    },
+    {
+      "project": "automation-project-1",
+      "project_source": "2",
+      "source_data": "2",
+      "cancel": "click"
+    },
+    {
+      "project": "automation-project-1",
+      "project_source": "3",
+      "source_data": "5",
+      "cancel": "outsidebox"
+    }
+  ]
+}

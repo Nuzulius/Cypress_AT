@@ -1,0 +1,22 @@
+{
+  "QA_dashboard_menu": "a[href='/features/dashboard']",
+  "dashboard_menu": "a[href='/annotation/features/dashboard']",
+
+  "project_dropdown": ".css-hlgwow",
+  "project_data": ".MuiDataGrid-cell.MuiDataGrid-cellLeft",
+  "annotation_data": ".MuiDataGrid-cell.MuiDataGrid-cellLeft[data-field='LineId']",
+  "label_radio": "label:nth-child(1) > span:nth-child(1)",
+
+  "prev_annotation_data_button": "button[type='button']:nth-child(1)",
+  "clear_button": "button[type='button']:nth-child(2)",
+  "delete_button": "button[type='button']:nth-child(3)",
+  "save_button": "button[type='button']:nth-child(4)",
+  "next_annotation_data_button": "button[type='button']:nth-child(5)",
+
+  "next_page_button": "button[aria-label='Next']",
+  "prev_page_button": "button[aria-label='Previous']",
+  "page_dropdown": "select:nth-child(2)",
+
+  "cancel_button": "div[role='presentation'] button:nth-child(1)",
+  "submit_button": "div[role='presentation'] button:nth-child(2)"
+}

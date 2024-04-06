@@ -1,33 +1,22 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import loginLocators from "../fixtures/locators/login_locator.json";
 
 // ***Launch Application***
 
 Cypress.Commands.add("launch_app", () => {
   cy.visit(
-    "https://automlvmjptest01.japaneast.cloudapp.azure.com/annotation/auth/login"
+    // "https://automlvmjptest01.japaneast.cloudapp.azure.com/annotation/auth/login"
+    "https://annotation.fata-organa.com/auth/login"
   );
+});
+
+// *** Login ***
+Cypress.Commands.add("valid_login", () => {
+  cy.visit(
+    "https://automlvmjptest01.japaneast.cloudapp.azure.com/annotation/auth/login"
+    // "https://annotation.fata-organa.com/auth/login"
+  );
+
+  cy.get(loginLocators.username_input).type("em-an-1");
+  cy.get(loginLocators.password_input).type("123456");
+  cy.get(loginLocators.login_button).click();
 });

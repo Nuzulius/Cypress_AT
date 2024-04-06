@@ -1,16 +1,16 @@
 {
   "login_invalid": [
     {
-      "username": "",
+      "username": " ",
       "password": "123456"
     },
     {
-      "username": "",
+      "username": " ",
       "password": "654321"
     },
     {
-      "username": "",
-      "password": ""
+      "username": " ",
+      "password": " "
     },
     {
       "username": "admin-em-zero",
@@ -22,7 +22,7 @@
     },
     {
       "username": "admin-em-zero",
-      "password": ""
+      "password": " "
     },
     {
       "username": "admin-em-2",
@@ -30,7 +30,7 @@
     },
     {
       "username": "admin-em-2",
-      "password": ""
+      "password": " "
     },
     {
       "username": "em-an-1",
@@ -38,7 +38,7 @@
     },
     {
       "username": "em-an-1",
-      "password": ""
+      "password": " "
     }
   ],
 

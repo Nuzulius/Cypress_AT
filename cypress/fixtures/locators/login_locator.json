@@ -1,6 +1,8 @@
 {
-  "jp_flag": "img[src='/annotation/flags/jp.svg']",
-  "us_flag": "img[src='/annotation/flags/us.svg']",
+  "test_jp_flag": "img[src='/annotation/flags/jp.svg']",
+  "test_us_flag": "img[src='/annotation/flags/us.svg']",
+  "jp_flag": "img[src='/flags/jp.svg']",
+  "us_flag": "img[src='/flags/us.svg']",
 
   "username_input": "input[type='text']",
   "password_input": "input[type='password']",

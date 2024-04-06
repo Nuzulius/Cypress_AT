@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "project": "automation-project-1",
+      "page": "next"
+    },
+    {
+      "project": "automation-project-1",
+      "page": "prev"
+    },
+    {
+      "project": "automation-project-1",
+      "page": "9"
+    },
+    {
+      "project": "automation-project-1",
+      "page": "1"
+    },
+    {
+      "project": "automation-project-1",
+      "page": "20"
+    }
+  ]
+}
